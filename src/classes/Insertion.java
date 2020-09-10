@@ -6,7 +6,7 @@ public class Insertion extends Sort
 	{
 		if (a == null)
 		{
-			throw new IllegalAccessError();
+			throw new NullPointerException();
 		}
 		
 		int N = a.length;

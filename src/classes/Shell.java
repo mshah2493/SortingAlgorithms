@@ -2,11 +2,11 @@ package classes;
 
 public class Shell extends Sort
 {
-	public static void Sort(Comparable [] a) 
+	public static void sort(Comparable [] a) 
 	{
 		if (a == null)
 		{
-			throw new IllegalAccessError();
+			throw new NullPointerException();
 		}
 		
 		int N = a.length;		

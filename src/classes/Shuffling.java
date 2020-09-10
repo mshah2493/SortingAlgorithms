@@ -6,6 +6,11 @@ public class Shuffling extends Sort
 {
 	public static void Shuffle(Comparable[] a)
 	{
+		if (a == null)
+		{
+			throw new NullPointerException();
+		}
+		
 		int N = a.length;
 		int r;
 		
