@@ -5,7 +5,7 @@ import java.util.Arrays;
 import classes.Insertion;
 import classes.Selection;
 
-public class SortingAlgorithms 
+public class ElementarySort 
 {
 	public static void main(String[] args) 
 	{
