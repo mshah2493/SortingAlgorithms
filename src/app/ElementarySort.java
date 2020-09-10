@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import classes.Insertion;
 import classes.Selection;
+import classes.Shell;
 
 public class ElementarySort 
 {
@@ -25,6 +26,15 @@ public class ElementarySort
 		
 		str = new String[] { "B", "A", "AB", "D", "C"};
 		Insertion.Sort(str);
+		System.out.println(Arrays.toString(str));
+		
+		System.out.println("===============Shell===============");
+		integer = new Integer[] { 9, 8, 3, 7, 5 , 6, 4 , 1, 0};
+		Shell.Sort(integer); 
+		System.out.println(Arrays.toString(integer));
+		
+		str = new String[] { "B", "A", "AB", "D", "C", "BC"};
+		Shell.Sort(str);
 		System.out.println(Arrays.toString(str));
 	}
 }
