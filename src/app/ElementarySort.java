@@ -5,6 +5,7 @@ import java.util.Arrays;
 import classes.Insertion;
 import classes.Selection;
 import classes.Shell;
+import classes.Shuffling;
 
 public class ElementarySort 
 {
@@ -35,6 +36,13 @@ public class ElementarySort
 		
 		str = new String[] { "B", "A", "AB", "D", "C", "BC"};
 		Shell.Sort(str);
+		System.out.println(Arrays.toString(str));
+		
+		System.out.println("===============Shuffle===============");
+		Shuffling.Shuffle(integer); 
+		System.out.println(Arrays.toString(integer));
+		
+		Shuffling.Shuffle(str);
 		System.out.println(Arrays.toString(str));
 	}
 }
