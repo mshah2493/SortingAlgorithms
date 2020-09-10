@@ -1,9 +1,14 @@
 package classes;
 
-public class Selection extends ASelection
+public class Selection extends Sort
 {
-	public void sort(Comparable [] a) 
+	public static void Sort(Comparable [] a) 
 	{
+		if (a == null)
+		{
+			throw new IllegalAccessError();
+		}
+		
 		int N = a.length;
 		
 		for (int i = 0; i < N - 1; ++i)
@@ -14,7 +19,7 @@ public class Selection extends ASelection
 			{
 				if (less(a[j], a[min]))
 				{
-					min = i;
+					min = j;
 				}
 			}
 			
