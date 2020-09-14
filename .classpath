@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Meet/Java WorkSpace/JARS/algs4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Array"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
