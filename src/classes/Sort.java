@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Comparator;
+
 public class Sort 
 {	
 	protected static void merge(Comparable[] a, Comparable[] aux, int low, int mid, int high)
@@ -18,6 +20,19 @@ public class Sort
 		}
 		
         assert isSorted(aux, low, high);
+	}
+	
+	protected static void merge(Object[] a, Object[] aux, int low, int mid, int high, Comparator comparator)
+	{
+		int i = low, j = mid + 1;
+		
+		for (int k = low; k <= high; k++) 
+		{
+			if (i > mid) aux[k] = a[j++];
+			else if (j > high) aux[k] = a[i++];
+			else if (less(comparator, a[j], a[i])) aux[k] = a[j++];
+			else aux[k] = a[i++];
+		}
 	}
 	
 	protected static boolean isSorted(Comparable[] a)
@@ -46,9 +61,21 @@ public class Sort
 		return a.compareTo(b) < 0;
 	}
 	
+	protected static boolean less(Comparator comparator, Object a, Object b)
+	{
+		return comparator.compare(a, b) < 0;
+	}
+	
 	protected static void exchange(Comparable[] a, int i, int j)
 	{
 		Comparable swap = a[i];
+		a[i] = a[j];
+		a[j] = swap;
+	}
+	
+	protected static void exchange(Object[] a, int i, int j)
+	{
+		Object swap = a[i];
 		a[i] = a[j];
 		a[j] = swap;
 	}
