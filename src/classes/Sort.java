@@ -3,38 +3,7 @@ package classes;
 import java.util.Comparator;
 
 public class Sort 
-{	
-	protected static void merge(Comparable[] a, Comparable[] aux, int low, int mid, int high)
-	{
-		assert isSorted(a, low, mid);
-        assert isSorted(a, mid + 1, high);
-        
-		int i = low, j = mid + 1;
-		
-		for (int k = low; k <= high; k++) 
-		{
-			if (i > mid) aux[k] = a[j++];
-			else if (j > high) aux[k] = a[i++];
-			else if (less(a[j], a[i])) aux[k] = a[j++];
-			else aux[k] = a[i++];
-		}
-		
-        assert isSorted(aux, low, high);
-	}
-	
-	protected static void merge(Object[] a, Object[] aux, int low, int mid, int high, Comparator comparator)
-	{
-		int i = low, j = mid + 1;
-		
-		for (int k = low; k <= high; k++) 
-		{
-			if (i > mid) aux[k] = a[j++];
-			else if (j > high) aux[k] = a[i++];
-			else if (less(comparator, a[j], a[i])) aux[k] = a[j++];
-			else aux[k] = a[i++];
-		}
-	}
-	
+{		
 	protected static boolean isSorted(Comparable[] a)
 	{
 		for (int i = 1; i < a.length; ++i)

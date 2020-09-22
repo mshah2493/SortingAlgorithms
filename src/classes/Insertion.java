@@ -26,4 +26,15 @@ public class Insertion extends Sort
 			}
 		}
 	}
+	
+	 public static void Sort(Comparable[] a, int low, int high) 
+	 {
+		 for (int i = low + 1; i < high; i++) 
+		 {
+			 for (int j = i; j > low && less(a[j], a[j-1]); j--) 
+			 {
+				 exchange(a, j, j-1);
+			 }
+	     }
+	 }	
 }
